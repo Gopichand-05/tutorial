@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>specificity</title>
+    <style>
+        /* unoversal selectrr 0 */
+        *{
+            color: blueviolet;
+        }
+        /* element selector 1 */
+        y.gopi{
+            color: aliceblue;
+        }
+        /* class specificity 10*/
+        .gopi{
+            color: aqua;
+        }
+        /* attribute selector10 */
+        [data-x=a]{
+            color: purp;
+        }
+        /* id sepecifcity  100 */
+        #id{
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- inline specificity 1000 -->
+    <h1 style="color: red;" class="gopi" id="chand" data-x="a"="">gopiwithcode</h1>
+</body>
+</html>
+<!-- preference from below to top{inline to *} -->

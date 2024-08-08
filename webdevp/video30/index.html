@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css variables</title>
+    <style>
+        /* creatind variables  */
+        /* global variables  */
+        :root{
+            --color:blue;
+            --seccolor:rgb(139, 139, 166);
+            --defpad:23px;
+            --defop:0.2;
+        }
+        .box1{
+            /* background-color: aliceblue; */
+            background-color: var(--color);
+            /* using variable  */
+
+        }
+        .box2{
+            /* local variable  */
+            /* --seccolor:rgb(36, 156, 30); */
+            /* background-color: aqua;  */
+            background-color: var(--seccolor);
+        }
+        ul{
+            display: flex;
+
+        }
+        ul li {
+            list-style: none;
+            padding: 20px;
+            border: 2px solid black;
+            opacity: 0.5;
+            /* visibility  */
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <ul>
+            <li>home</li>
+            <li>about</li>
+            <li>contacts</li>
+        </ul>
+    </div>
+    <div class="box2">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam iste id corporis, maiores quasi quia
+            quisquam atque beatae sed reprehenderit, rerum dicta delectus hic doloremque dolorem consectetur impedit
+            nobis quis? Delectus ullam ex reiciendis vero quis aliquid repellendus et dolorum natus quisquam, aspernatur
+            asperiores libero ut corrupti fugit voluptatem, facere eos fuga laudantium explicabo. Recusandae voluptas
+            fuga repudiandae neque facere voluptate quae fugit magni! Quidem cupiditate ab eos dolorem?</p>
+    </div>
+</body>
+
+</html>

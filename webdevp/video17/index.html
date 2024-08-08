@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css selectors</title>
+    <style>
+        /* class slelctor */
+        .red{
+            color: aqua;
+        }
+        /* id selector */
+        #green{
+            color: green;
+        }
+        /* child selector */
+        div>p{
+            color: rgb(34, 18, 152);
+        }
+        /* descent selectir */
+        div ol {
+            color: yellow;
+        }
+        /* universal selector */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* psuedo seelctir */
+        a:visited{
+            background-color: yellow ;
+        }
+        a:link{
+            color: aqua;
+        }
+        a :active{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="red">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <ol>
+            <li>gopi</li>
+            <li>vani</li>
+        </ol>
+    </div>
+    <div id="green">
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, adipisci!</p>
+    </div>
+
+    <a href="https://www.google.com">open google</a>
+</body>
+</html>
