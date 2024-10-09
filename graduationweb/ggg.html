@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Navigation Styling</title>
+    <style>
+        /* Set the body to have some default font settings and background */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 1cm thick box for the university name */
+        .university-header {
+            background-color: #004d99; /* Dark background for the header */
+            color: white;
+            text-align: start;
+            font-size: 50px;
+            font-weight: bold;
+            padding: 10px 0; /* Creates a 1cm thick box (approx.) */
+            border-top: 0.5px solid #00264d; /* Thin border to emphasize the top */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow below the header */
+        }
+
+        /* New section for UNIVERSITY REGISTRAR */
+        .university-subheader {
+            background-color: white; /* White background for the subheader */
+            color: #004d99; /* Dark blue text to match the theme */
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 0; /* Padding to make it visually balanced */
+            text-transform: uppercase; /* Make the text uppercase */
+            border-bottom: 0.5px solid #cccccc; /* Subtle border below the subheader */
+        }
+
+        /* Center the nav below the header */
+        span {
+            display: block;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Style the ul */
+        ul {
+            padding: 0;
+            margin: 0;
+            display: inline-block; /* Makes it wrap around the links */
+            background-color: #004d99; /* Dark background for the nav */
+            border-radius: 25px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        /* Style each a tag */
+        ul a {
+            text-decoration: none;
+            color: white;
+            padding: 15px 20px;
+            display: inline-block; /* Inline block to allow padding */
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Add space between links */
+        ul a:not(:last-child) {
+            margin-right: 10px; /* Adds spacing between items */
+        }
+
+        /* Hover effect */
+        ul a:hover {
+            background-color: #ffffff;
+            color: #004d99;
+            border-radius: 25px; /* Rounds the hover effect */
+        }
+
+        /* Optional active style for the currently selected link */
+        ul a.active {
+            background-color: #ffffff;
+            color: #004d99;
+            border-radius: 25px;
+        }
+
+        /* New section for GRADUATION */
+        .graduation {
+            background-color: #004d99; /* Blue background for graduation */
+            color: white;
+            text-align: center;
+            font-size: 36px; /* Double the size of university registrar */
+            font-weight: bold;
+            padding: 10px 0; /* Padding for better appearance */
+            text-transform: uppercase; /* Uppercase text */
+            border-radius: 15px; /* Rounding the corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow below the section */
+        }
+
+        /* 9cm box section */
+        .info-boxes {
+            height: 9cm;
+            display: flex;
+            flex-wrap: wrap; /* Allows wrapping for two rows */
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+        }
+
+        /* Individual boxes */
+        .box {
+            width: 30%;
+            height: 2cm; /* Height adjusted to 2cm */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 15px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #004d99;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Hover effect for the boxes */
+        .box:hover {
+            transform: scale(1.05);
+            background-color: rgba(255, 255, 255, 0.8); /* Slight light effect */
+            color: #004d99;
+        }
+
+        /* For displaying content when clicked */
+        .box:active {
+            transform: scale(1.02);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Hide all content sections by default */
+        .content-section {
+            display: none;
+            padding: 20px;
+            background-color: #f0f0f0;
+            margin: 20px;
+            border: 1px solid #cccccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Active section style */
+        .content-section.active {
+            display: block;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .box {
+                width: 100%;
+                margin-bottom: 20px; /* Space between rows for mobile */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- University Header -->
+    <div class="university-header">
+        <img src="Screenshot 2024-09-30 144140.png" alt="universitylogo" class="logo" />
+        VITA University
+    </div>
+
+    <!-- University Subheader: UNIVERSITY REGISTRAR -->
+    <div class="university-subheader">
+        UNIVERSITY REGISTRAR
+    </div>
+
+    <!-- Navigation Links -->
+    <span>
+        <ul>
+            <a href="#home" class="active">HOME</a>
+            <a href="#schedule">SCHEDULE</a>
+            <a href="#contacts">CONTACTS</a>
+        </ul>
+    </span>
+
+    <!-- Graduation Section -->
+    <div class="graduation">
+        GRADUATION
+    </div>
+
+    <!-- 9cm Box Section with 6 options -->
+    <div class="info-boxes">
+        <div class="box box1" onclick="showContent('content1')">CHECK ELIGIBILITY</div>
+        <div class="box box2" onclick="showContent('content2')">GET GUEST TICKETS</div>
+        <div class="box box3" onclick="showContent('content3')">SCHEDULE OF CULTURAL EVENTS</div>
+        <div class="box box4" onclick="showContent('content4')">PARKING SLOTS</div>
+        <div class="box box5" onclick="showContent('content5')">SCHEDULE OF CEREMONIES</div>
+        <div class="box box6" onclick="showContent('content6')">VENUES OF CULTURAL EVENTS</div>
+    </div>
+
+    <!-- Content Sections for each box -->
+    <div id="content1" class="content-section">
+        <h2>Check Eligibility</h2>
+        <p>This section will display eligibility criteria for the graduation.</p>
+    </div>
+
+    <div id="content2" class="content-section">
+        <h2>Get Guest Tickets</h2>
+        <p>Here you can find information on how to obtain guest tickets for the graduation event.</p>
+    </div>
+
+    <div id="content3" class="content-section">
+        <h2>Schedule of Cultural Events</h2>
+        <p>Details about various cultural events and their timings.</p>
+    </div>
+
+    <div id="content4" class="content-section">
+        <h2>Parking Slots</h2>
+        <p>Information on parking availability and guidelines for the event.</p>
+    </div>
+
+    <div id="content5" class="content-section">
+        <h2>Schedule of Ceremonies</h2>
+        <p>Timings and venues of all the graduation ceremonies.</p>
+    </div>
+
+    <div id="content6" class="content-section">
+        <h2>Venues of Cultural Events</h2>
+        <p>Find out where all the cultural events will be hosted.</p>
+    </div>
+
+    <!-- JavaScript to show and hide content -->
+    <script>
+        function showContent(contentId) {
+            // Hide all content sections
+            var sections = document.querySelectorAll('.content-section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+
+            // Show the clicked content section
+            var activeSection = document.getElementById(contentId);
+            activeSection.classList.add('active');
+        }
+    </script>
+</body>
+</html>

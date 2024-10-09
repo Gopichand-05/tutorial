@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Navigation Styling</title>
+    <style>
+        /* Set the body to have some default font settings and background */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 1cm thick box for the university name */
+        .university-header {
+            background-color: #004d99;
+            color: white;
+            text-align: start;
+            font-size: 50px;
+            font-weight: bold;
+            padding: 10px 0;
+            border-top: 0.5px solid #00264d;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .university-subheader {
+            background-color: white;
+            color: #004d99;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 0;
+            text-transform: uppercase;
+            border-bottom: 0.5px solid #cccccc;
+        }
+
+        span {
+            display: block;
+            text-align: center;
+            padding: 20px;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+            background-color: #004d99;
+            border-radius: 25px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        ul a {
+            text-decoration: none;
+            color: white;
+            padding: 15px 20px;
+            display: inline-block;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        ul a:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        ul a:hover {
+            background-color: #ffffff;
+            color: #004d99;
+            border-radius: 25px;
+        }
+
+        ul a.active {
+            background-color: #ffffff;
+            color: #004d99;
+            border-radius: 25px;
+        }
+
+        .graduation {
+            background-color: #004d99;
+            color: white;
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            padding: 10px 0;
+            text-transform: uppercase;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .info-boxes {
+            height: 9cm;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .box {
+            width: 30%;
+            height: 2cm;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 15px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: antiquewhite;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #004d99;
+        }
+
+        .overview-section {
+            background-color: antiquewhite;
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #cccccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .overview-section h2 {
+            font-size: 36px;
+            color: #333333;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .overview-section p {
+            font-size: 16px;
+            color: #555555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .overview-section a {
+            color: #004d99;
+            text-decoration: none;
+        }
+
+        .overview-section a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-section {
+            display: flex;
+            justify-content: space-around;
+            background-color: white;
+            padding: 20px;
+            color: black;
+        }
+
+        .footer-box {
+            text-align: center;
+            width: 30%;
+        }
+
+        .footer-box h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .footer-box p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .footer-bottom {
+            background-color: #004d99;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .language-select {
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .footer-info {
+            text-align: center;
+        }
+
+        .footer-info a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-info a:hover {
+            text-decoration: underline;
+        }
+
+        .logo {
+            width: 100px;
+            padding: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="login.html">
+</head>
+<body>
+    <div class="university-header">
+        <img src="Screenshot 2024-09-30 144140.png" alt="universitylogo" class="logo">
+        VITA University
+    </div>
+
+    <div class="university-subheader">
+        UNIVERSITY REGISTRAR
+    </div>
+
+    <span>
+        <ul>
+            <a href="#home" class="active">HOME</a>
+            <a href="#schedule">SCHEDULE</a>
+            <a href="#contacts">CONTACTS</a>
+            <a href="login.html">LOGIN</a> <!-- Link to login page -->
+        </ul>
+    </span>
+
+    <div class="graduation">
+        GRADUATION
+    </div>
+
+    <div class="info-boxes">
+        <div class="info-boxes">
+            <div class="box box1">
+                <a href="checkeligibility.html" class="plain-text-link">checkeligibility</a>
+            </div>
+        </div>
+        
+        <style>
+            .plain-text-link {
+                color: inherit;  /* Inherit the color from parent */
+                text-decoration: none;  /* Remove the underline */
+                cursor: pointer;  /* Keep pointer on hover */
+            }
+        </style>
+        
+        <div class="box box2">GET GUEST TICKETS</div>
+        <div class="box box3">SCHEDULE OF CULTURAL EVENTS</div>
+        <div class="box box4">PARKING SLOTS</div>
+        <div class="box box5">SCHEDULE OF CEREMONIES</div>
+        <div class="box box6">VENUES OF CULTURAL EVENTS</div>
+    </div>
+
+    <div class="overview-section">
+        <h2>Overview</h2>
+        <p>
+            Staff in the Graduation Office process clearances for all graduation requirements, as well as grade-point-average requirements for all undergraduate and graduate students. Staff also monitor compliance with the foreign language admission requirement and the Graduating Senior Survey Requirement.
+        </p>
+        <p>
+            For more information, contact the Office of the Registrar at (850) 644-1050 or email <a href="mailto:gopichandmallela@gmail.com">gopichandmallela@gmail.com</a>.
+        </p>
+    </div>
+
+    <div class="footer-section">
+        <div class="footer-box">
+            <h3>Mailing Address</h3>
+            <p>
+                VITA University Center<br>
+                282 Champions Way<br>
+                Amaravati, AP 522236
+            </p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Contact</h3>
+            <p>Email: <a href="mailto:gopichandmallela5@gmail.com">gopichandmallela5@gmail.com</a></p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Hours</h3>
+            <p>
+                Monday - Friday<br>
+                8:00 AM - 5:00 PM<br>
+                Indian Standard Time
+            </p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <select class="language-select">
+            <option>Select Language</option>
+            <option>English (UK)</option>
+            <option>English (India)</option>
+            <option>American English</option>
+        </select>
+        <div class="footer-info">
+            <p>&copy; VITA UNIVERSITY</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Copyright</a></p>
+        </div>
+    </div>
+</body>
+</html>
